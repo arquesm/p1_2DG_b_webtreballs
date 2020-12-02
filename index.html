@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIA - magda arques</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /*reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-size: 20px;
+            font-family: 'Montserrat', 'Verdana',sans-serif;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*HEADER*/
+        header {
+            width: 100%;
+            padding: 0 36px;
+            background-color: #88FF59;
+            background-image: url('img/pattern.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-y;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            height: 100vh;
+            color: #940986;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 13vw;
+            line-height: 13vw;
+        }
+
+        h2 {
+            font-size: 9vw;
+        }
+
+        h3 {
+            font-size: 8vw;
+        }
+
+        h2,
+        h3 {
+            font-weight: 500;
+        }
+
+        /*NAV*/
+        nav {
+            display: flex;
+            top: 0;
+            position: sticky;
+            width: 100%;
+            padding: 0 36px;
+            height: 130px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #88FF59;
+        }
+
+        nav a {
+            text-transform: uppercase;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        main {
+            width: 100%;
+            padding: 3em 36px 2em 36px;
+        }
+
+        /*GALLERY*/
+        .grid-container{
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            background-color: #88FF59;
+            margin: 0 0 1em 0;
+            padding: 0.5em;
+            font-weight: 900;
+            max-width: 100%;
+        }
+
+        figure {
+            height: 300px;
+            background: yellow;
+        }
+
+        figure img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        figcaption {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+
+        figcaption h4 {
+            font-size: 1em;
+            color: white;
+        }
+
+        /*FOOTER*/
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            padding: 2em 36px;
+            height: 350px;
+            background-color: #69E03A;
+        }
+
+        .xxss {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .email {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+        }
+        @media only screen and (max-width:767px){
+            main {
+                background-color: red;
+            }
+        }
+        @media only screen and (min-width:768px) {
+            header{
+                background-image: url('img/pattern_tablet.png');
+            }
+            h1{
+                margin: auto;
+                font-size: 7vw;
+                line-height: 6vw;
+            }
+            h2{
+                margin: auto;
+                font-size: 5vw;
+            }
+            h3{
+                margin: auto;
+                font-size: 4vw;
+            }
+            nav{
+                justify-content: center;
+            }
+            nav a{
+                margin: 0 2em;
+            }
+            main {
+                width: 100%;
+                background-color: orange;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .grid-container{
+                width: 85%;
+                flex-direction: row;
+                justify-content: center;
+            }
+            section {
+                margin: 0.5em;
+                min-width: 260px;
+                max-width: 280px; 
+            }
+        }
+        @media only screen and (min-width: 1200px){
+            main {
+                background: pink;
+            }
+            header{
+                height: 75vh;
+                background-image: url('img/pattern_escritori.png');
+                background-position: center;
+            }
+            h1,h2,h3{
+                width: 70%;
+            }
+            h1{
+                font-size: 5vw;
+            }
+            h1 br{
+                display: none;
+            }
+            h2{
+                font-size: 4vw;
+                text-align: right;
+            }
+            h3{
+                font-size: 3vw;
+                padding-left: 10%;
+            }
+            nav{
+                justify-content: flex-start;
+            }
+            nav a:first-child{
+                margin-left: 15%;
+            }
+            .grid-container{
+                padding: 0.3%;
+                width: 71%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            section{
+                width: 30%;
+                margin:0 1.5% 1% 0;
+            }
+            footer{
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .xxss{
+                margin-left: 15%;
+                width: 75%;
+                justify-content: flex-start;
+            }
+            .xxss a{
+                padding-right: 20%;
+            }
+            .email{
+                margin-right: 15%;
+                width: 25%;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <header>
+            <h1>Recursos<br> Interactius<br> Aplicats</h1>
+            <h2>2 Disseny Gràfic <br>EASDAlcoi</h2>
+            <h3>Magda Arques</h3>
+        </header>
+        <nav>
+            <a href="#">projectes</a>
+            <a href="#">contacte</a>
+        </nav>
+        <main>
+          <div class="grid-container">
+                <section>
+                    <a href="http://">
+                       <figure>
+                        <img src="img/p0.png" alt="p0_llocweb">
+                        </figure>
+                    </a>
+                    <figcaption>
+                        <h4>p0_llocweb</h4>
+                    </figcaption>
+                </section>
+            <section>
+                <figure>
+                    <img src="img/p0.png" alt="p0_llocweb">
+                </figure>
+                <figcaption>
+                    <h4>p0_llocweb</h4>
+                </figcaption>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/p0.png" alt="p0_llocweb">
+                </figure>
+                <figcaption>
+                    <h4>p0_llocweb</h4>
+                </figcaption>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/p0.png" alt="p0_llocweb">
+                </figure>
+                <figcaption>
+                    <h4>p0_llocweb</h4>
+                </figcaption>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/p0.png" alt="p0_llocweb">
+                </figure>
+                <figcaption>
+                    <h4>p0_llocweb</h4>
+                </figcaption>
+            </section>
+             </div>
+        </main>
+        <footer>
+            <div class="xxss">
+                <a href="#">insta</a>
+                <a href="#">twitter</a>
+                <a href="#">ello</a>
+            </div>
+            <div class="email">
+                <a href="#">B-)</a>
+            </div>
+        </footer>
+   
+</body>
+
+</html>
